@@ -5,34 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Home Page</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
-    <style>
-        table {
-          border-collapse: collapse;
-          width: 100%;
-          border: 1px solid #000; /* Border color. */
-        }
-        th,td {
-            border: 1px solid #000; /* Border color */
-            padding: 8px;
-            text-align: left;
-        }
-        th {
-            background: #f2f2f2; /* Oue header background-color*/
-        }
-        header a{
-            margin-left: 200px;
-            text-decoration: none;
-            font-size: large;
-            font-family: Arial, Helvetica, sans-serif;
-            border-radius: 30px; 
-            padding: 10px;
-        }
-    header a:hover{
-        background-color: #000;
-        color: white;
-        
-    }
-    </style>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 <header>
@@ -40,13 +13,19 @@
     <a href="./skillspage/index.html">Skills</a>
     <a href="./contactpage/index.html">Contact</a> 
 </header>
-    <img src="image.JPG" alt="My picture" title="Owais Ahmad" height="150px" width="150px">
+<div class="container"> <img src="image.JPG" alt="My picture" title="Owais Ahmad" height="150px" width="150px">
     <br>
-    <h1>Owais Ahmad</h1>
+    <h1 style="color: rgba(20, 98, 10, 0.822); font-size: 30px;">Owais Ahmad
+        <img id="speaker" src="speaker-icon.png" alt="Speaker icon" height="35px" width="35px"></h1>
     <p>I am Owais Ahmad,Student of finel semester, Studying BS Software Engineering, at Islamia college university peshawar.</p>
-    <audio controls>
-        <source src="myVoice.ogg" type="audio/ogg">
-    </audio>
+    <!-- THis code for my voice -->
+    <script>
+        var audio = new Audio("myVoice.ogg");
+        function playAudio() {
+            audio.play();
+        }
+        document.getElementById("speaker").addEventListener("click", playAudio);
+    </script>
     <h4>My Education</h4>
     <ol><li>Matric</li>
         <a href="https://www.bizsouthasia.com/PK/umar-shaheed-memorial-public-high-school-0300-5233097" target="_blank">My Matric school Link</a>
@@ -89,5 +68,6 @@
     </table>
     <br>
     <iframe width="560" height="315" src="https://www.youtube.com/embed/FVB7awJlUNc?si=OUJY9WitD5pYeFmS&amp;start=26" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+</div>
 </body>
 </html>
